@@ -1,3 +1,4 @@
+import os
 import tempfile
 import unittest
 import main
@@ -18,3 +19,7 @@ class TestMain(unittest.TestCase):
         main.write_range(filename, a, b)
         with open(filename) as f:
             self.assertEqual(list(map(str, range(a, b))), f.read().split())
+
+    def test_count_files(self):
+        path = os.getcwd()
+        self.assertEqual(len(os.listdir(path)), main.count_files(path))
