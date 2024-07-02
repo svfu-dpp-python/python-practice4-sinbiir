@@ -1,8 +1,6 @@
 import os
 
-if __name__ == "__main__":
-    pass
-    # ваш тестовый код
+
 
 
 
@@ -18,7 +16,7 @@ def find_maximums(path):
 def write_range(name, a, b):
     with open(f"{name}", "w") as f:
         for i in range(a,b):
-            f.write(i)
+            f.write(str(i))
 
 
 
@@ -31,4 +29,8 @@ def open_in_notepad(filename):
         print(f"Файл {filename} не найден.")
         return
     os.system(f"notepad++ {filename}")
-open_in_notepad("example.txt")
+
+if __name__ == "__main__":
+    # ваш тестовый код
+
+    open_in_notepad("example.txt")
