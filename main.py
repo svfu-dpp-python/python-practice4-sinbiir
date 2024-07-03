@@ -4,7 +4,7 @@ def find_maximums(path):
     arrow = []
     with open(f"{path}", "r") as f:
         for i in f.readlines():
-            arrow.append(max(map(int,input().split(" "))))
+            arrow.append(max(map(int,i.split(" "))))
     return arrow
 
 def write_range(name, a, b):
